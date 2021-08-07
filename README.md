@@ -2,11 +2,16 @@
 
 Portifolio do desenvolvedor
 
-## Configuracoes
-Font do projeto: Josefin Slab
-                 Baloo Da2
-                 Mulish
+## Tarefas
 
-Font icons: cdn all minificado coletado do site cdnjs
+O controle das tarefas desse projeto será realizado no GitHub
+
+## Icones
+
+:package: nova funcionalidade
+:up: atualização
+:beatle: correção de bug
+:checker_flag: release
+
 
 
