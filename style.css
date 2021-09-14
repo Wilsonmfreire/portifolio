@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css');
 
 *{
     margin: 0;
@@ -189,7 +190,7 @@ header{
     top: 0;
     right: -20rem;    
     transition: all 1s;
-    z-index: 150;
+    z-index: 1;
 }
 
 .show-menu .sidebar{
@@ -333,6 +334,8 @@ header{
 .projetos{
     display: flex;
     justify-content: space-evenly;
+    margin: 1rem;
+
 }
 
 .card{
@@ -428,8 +431,8 @@ header{
 }
 
 .contato-wrapper{
-    width: 60%;
-    height: 30rem;
+    width: 75%;
+    height: 39rem;
     display: flex;
 }
 
@@ -481,7 +484,7 @@ header{
     border-bottom: 2px dashed #636363;
     height: 3rem;
     outline: none;
-    margin: 1rem 0;
+    margin: 3rem 0;
 }
 
 .field-label{
@@ -631,113 +634,88 @@ footer{
     box-shadow: 0 0.1rem 0.6rem #000;
 }
 
-@media (min-width: 700px) and (max-width: 1023px) {
+@media (min-width: 700px) and (max-width: 1023px){
     header {
-        height: 75vh;
+        height: 60vh;
         width: 100vw;
-      }
-    
-    .banner h1{
-        width: 90%;
-        font-size: 4rem;
-        line-height: 3.7rem;
     }
 
-    .sidebar{
-        height: 100%;
+    .conhecimento-img-wrapper{
+        display: none;
     }
 
-    section.conhecimento-img-wrapper{
-    display: none;
-    }
-
-    section.conhecimento{
-        display:grid;
-        grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: repeat(6, 6rem);
-        row-gap: .5rem;
-    }
-
+ /*alinhando conhecimentos*/
     .conhecimento:nth-child(1){
-        grid-column:2/8;
-        grid-row:1/3;
+        grid-column: 2/8;
+        grid-row: 1/3;
     }
 
     .conhecimento:nth-child(2){
         grid-column:2/8;
         grid-row:3/5;
     }
-
+    
     .conhecimento:nth-child(3){
         grid-column:2/8;
         grid-row:5/-1;
     }
-
+    
     .conhecimento:nth-child(4){
         grid-column:10/16;
         grid-row:1/3;
     }
-
+    
     .conhecimento:nth-child(5){
         grid-column:10/16;
         grid-row:3/5;
     }
-
+    
     .conhecimento:nth-child(6){
         grid-column:10/16;
         grid-row:5/-1;
     }
 
-    .sessao-conhecimentos{
+    .sessao-conhecimento{
         background-color: rgb(235, 235, 235);
     }
-
+/*projetos*/
     .projetos{
-        margin: 0 auto;
-        display:grid;
-        grid-template-columns: repeat(2, .3fr);
-        grid-template-rows: repeat(3);
+        text-align: center;
+    }
+    .card{
+        margin: 0.5rem;
     }
 
-    .card:nth-child(1){
-        grid-column:1/4;
-        width: 45rem;
-        height: 15rem;
+    .card-info{
+        padding: .5rem;
+        align-content: center;
     }
 
     .card-info h2{
         font-size: 1.7rem;
     }
 
-    .card:nth-child(2){
-        grid-column:2/1;
-        padding-left: 1rem;
-        width: 20rem;
-        justify-content: center;
+    .card-info p{
+        margin: 1.5rem
     }
 
-    .card:nth-child(3){
-        grid-column:3/3;
-        padding-right: 1rem;
-        width: 20rem;
-        justify-content: center;
-    }
-
-    .contato-left{
-        display: none;
+    /*contato*/
+    .sessao-contato{
+        margin: 0 0 1rem 0;
+        height: auto;
     }
 
     .contato-right{
         width: 100%;
         border-radius: 5px;
     }
-
     .contato-wrapper{
         width: 70%;
         display: flex;
         box-shadow: 0 1rem 3rem rgba(0,0,0, 0.5);
     }
 
+    /*orcamento*/
     .orcamento-wrapper{
         width: 90%;
         height: 75%;
@@ -749,26 +727,20 @@ footer{
 
     .sessao-orcamento{
         width: 100%;
-        height: 100vh;    
+        height: 57vh;    
         object-fit: cover;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .footer-content{
-        width: 90%;
-    }
-
     .social-list a{
         margin: 0 1rem;
         font-size:1.3rem ;
     }
-
 }
 
 @media (min-width: 320px) and (max-width: 699px){
-
     header{
         width: 100vh;
         height: 100vh;
@@ -784,7 +756,7 @@ footer{
         height: 100%;
     }
 
-    section.conhecimento-img-wrapper{
+    .conhecimento-img-wrapper{
         display: none;
     }
 
@@ -792,7 +764,7 @@ footer{
         width: 100vh;
     }
 
-    section.conhecimento{
+    .conhecimentos{
         display:grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: repeat(6, 6rem);
@@ -800,7 +772,7 @@ footer{
         text-align: justify;
     }
 
-    .conhecimento p{
+    .conhecimentos p{
         line-height: 1rem;
     }
     .conhecimento:nth-child(1){
@@ -836,7 +808,7 @@ footer{
         background-color: rgb(235, 235, 235);
     }
 
-    .projetos h1{
+    .sessao-projetos h1{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -961,3 +933,11 @@ footer{
         font-size:1.3rem ;
     }
 }
+
+
+
+
+
+
+
+
